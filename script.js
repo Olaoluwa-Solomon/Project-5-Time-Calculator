@@ -10,7 +10,7 @@ button.addEventListener("click", function (){
         alert("Name cannot be blank");
         return false;
 } else if(!(isNaN(Homeinput.value))){
-    alert("Please enter text");
+    alert("Name cannot be digits");
     return false;
     
 } else {
