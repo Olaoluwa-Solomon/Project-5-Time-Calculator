@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================== Background ==================== */
+.main {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7)50%, rgba(0, 0, 0, 0.7)50%),url(/img/istockphoto-1459289226-612x612.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;    
+}
+
+/* ========================= Welcome Olaoluwa ======================== */
+
+.main .greeting h2 {
+    font-size: 90px;
+    color: rgba(240, 235, 237, 1);
+    display: relative;
+    text-align: center;
+    padding: 20px 0 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    /* background: red; */
+    /* display: relative; */
+    
+}
+
+.main .greeting .backButton {
+    /* background: blue; */
+    /* display: absolute; */
+}
+
+.main .greeting .backButton ion-icon {
+    font-size: 50px;
+    padding-left: 40px;
+    padding-top: 10px;
+    /* padding-bottom: -30px; */
+    color: rgba(240, 235, 237, 0.2);
+}
+
+/* ========================== The Time is & Today's Date is ========================== */
+
+.main h4 {
+    font-size: 55px;
+    padding-left: 40px;
+    color: rgb(240, 235, 237, 1);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    padding-bottom: 40px;
+    cursor: pointer;
+    letter-spacing: -3px;
+    word-spacing: -15px;
+    }
+
+
+/* ============================== Date NUmbers ========================== */
+
+.main h4 span.numbers {
+    font-size: 110px;
+    font-weight: 600;
+    color: #fff;
+    padding: 0 5px;
+    border-radius: 10px;
+    background-color: rgba(11, 10, 20, 0.4);
+    box-shadow: 5px 5px 10px 2px rgba(240, 235, 237, 0.4);
+}
+
+/* ================================== / & am ============================= */
+
+.main h4 span {
+    font-size: 120px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* ================================== HOME Page ================================ */
+
+.mainHome {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7)50%, rgba(0, 0, 0, 0.7)50%), url(/img/istockphoto-1459289226-612x612.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+}
+
+.welcome {
+    font-size: 90px;
+    color: rgba(240, 235, 237, 1);
+    display: relative;
+    text-align: center;
+    padding: 50px 0 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    padding-top: 100px;
+}
+
+.note {
+    font-size: 35px;
+    padding-left: 40px;
+    color: rgb(240, 235, 237, 1);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    padding-bottom: 40px;
+    padding-top: 30px;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+
+
+.mainHome .input input {
+    width: 500px;
+    height: 40px;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin: auto;
+    background: rgb(240, 235, 237, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+
+.mainHome .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+.mainHome .button a button {
+    width: 100px;
+    padding: 5px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgb(240, 235, 237, 0.7);
+    border: 1px solid black;
+}
+
+.mainHome .button a button:hover {
+    background: transparent;
+    transition: 0.5s;
+    color: rgb(240, 235, 237, 1);
+}
