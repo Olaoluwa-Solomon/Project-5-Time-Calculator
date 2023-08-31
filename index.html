@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Date and Time</title>
+    <title>Time Calculator</title>
 
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -14,22 +14,38 @@
           <span class="backButton"
             ><ion-icon name="arrow-back-circle-outline"></ion-icon></span
         ></a>
-        <h2 class="username">Welcome,</h2>
+        <h2 class="username">Welcome,<span id="firstName">User</span></h2>
       </div>
-      <br />
       <h4>
-        The time is: <span class="numbers">1</span
-        ><span background="none" ;>:</span><span class="numbers">06</span
-        ><span>:</span><span class="numbers">58</span>
-        <span class="numbers">am</span>
+        Current time is: <span class="numbers" id="hours">00</span
+        ><span background="none" ;>:</span
+        ><span class="numbers" id="minutes">00</span><span>:</span
+        ><span class="numbers" id="seconds">00</span>
+        <span class="numbers" id="session">am</span>
       </h4>
-      <br />
       <h4>
-        Today's date is: <span class="numbers">11</span><span>/</span
-        ><span class="numbers">09</span> <span>/</span
-        ><span class="numbers">2023</span>
+        Current date is: <span class="numbers" id="day">00</span><span>/</span
+        ><span class="numbers" id="month">00</span> <span>/</span
+        ><span class="numbers" id="year">00</span>
       </h4>
-      <br />
+      <h4>
+        You will be 100 years old in:
+        <span class="numbers" id="Year">00 yrs</span>
+
+        <span class="numbers" id="Month">00 mths</span>
+
+        <span class="numbers" id="Week">00 wks</span>
+
+        <span class="numbers" id="Day">00 days</span><br />
+
+        <br />
+        <span class="numbersalign" id="Hour">00 hrs</span>:<span
+          class="numbers"
+          id="Minute"
+          >00 mins</span
+        >:<span class="numbers" id="Second">00 s</span>
+      </h4>
+      <br /><br />
     </div>
 
     <script src="script.js"></script>
