@@ -156,3 +156,104 @@
 }
 
 
+/* ======================== First Page Responsiveness ============================= */
+
+@media (max-width: 700px){
+.mainHome {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.welcome {
+    font-size: 40px;
+    text-align: center;
+}
+
+.note {
+    font-size: 14px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.input {
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+}
+
+
+/* ===================== Second Page Responsiveness ================== */
+
+@media (max-width: 700px) {
+.main {
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    width: 100%;
+}
+
+.main .greeting h2 {
+    display: flex;
+    align-items: center;
+    font-size: 60px;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.main .greeting .backButton ion-icon {
+    font-size: 40px;
+    padding-top: 0px;
+    padding-left: 10px;
+}
+
+.username {
+    font-size: 20px;
+}
+
+.main h4 {
+    font-size: 25px;
+    padding-left: 0px;
+}
+
+.main h4 span.numbers {
+    font-size: 25px;
+    padding: 5px;
+}
+
+.main h4 span.numbersalign {
+    font-size: 25px;
+    margin-left: 330px;
+    padding: 5px;
+}
+}

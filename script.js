@@ -1,79 +1,79 @@
-let firstname = document.getElementById("firstName");
-var button = document.getElementById("btn");
-var Homeinput= document.getElementById("Homeinput");
-var navigate = document.getElementById("navigate");
+// Get DOM elements
+const firstname = document.getElementById("firstName");
+const button = document.getElementById("btn");
+const Homeinput = document.getElementById("Homeinput");
+const navigate = document.getElementById("navigate");
 
-function getUser (){
-  if(Homeinput.value=== ""){
+// Function to get user input
+function getUser() {
+  if (Homeinput.value === "") {
     alert("Name cannot be blank");
-  return false;
-} else if(!(isNaN(Homeinput.value))){
+    return false;
+  } else if (!isNaN(Homeinput.value)) {
     alert("Name cannot be digits");
     return false;
-} else {
-getDob();
-localStorage.setItem("username", Homeinput.value)
-navigate.href = "index.html";
+  } else {
+    getDob();
+    localStorage.setItem("username", Homeinput.value);
+    navigate.href = "index.html";
+  }
 }
 
-}
+// Display the username retrieved from localStorage in uppercase
 firstname.innerText = (localStorage.getItem("username")).toUpperCase();
 
-function displayTime(){
+// Display current time
+function displayTime() {
+  const dateTime = new Date();
+  const hrs = String(dateTime.getHours() % 12 || 12).padStart(2, "0");
+  const min = String(dateTime.getMinutes()).padStart(2, "0");
+  const sec = String(dateTime.getSeconds()).padStart(2, "0");
+  const ampm = dateTime.getHours() < 12 ? 'AM' : 'PM';
+  const hours = (dateTime.getHours() % 12) || 12;
 
-    var dateTime = new Date();
-    var hrs = String(dateTime.getHours() % 12 || 12).padStart(2,"0");
-    var min = String(dateTime.getMinutes()).padStart(2,"0");
-    var sec = String(dateTime.getSeconds()).padStart(2,"0");
-    var ampm = hours < 12 ? 'AM' : 'PM';
-    var hours = (hrs % 12) || 12;
+  document.getElementById('hours').innerHTML = hrs;
+  document.getElementById('minutes').innerHTML = min;
+  document.getElementById('seconds').innerHTML = sec;
+  document.getElementById('session').innerHTML = ampm;
 
+  const day = String(dateTime.getDate()).padStart(2, "0");
+  const mon = String(dateTime.getMonth() + 1).padStart(2, "0");
+  const yr = dateTime.getFullYear();
 
-    
-    document.getElementById('hours').innerHTML = hrs;
-    document.getElementById('minutes').innerHTML = min;
-    document.getElementById('seconds').innerHTML = sec;
-    document.getElementById('session').innerHTML = ampm;
-
-
-    var day = String(dateTime.getDate()).padStart(2,"0");
-    var mon = String(dateTime.getMonth()+ 1).padStart(2,"0");
-    var yr = dateTime.getFullYear();
-
-    document.getElementById("day").innerHTML = day;
-    document.getElementById("month").innerHTML = mon;
-    document.getElementById("year").innerHTML = yr;
-
-    
+  document.getElementById("day").innerHTML = day;
+  document.getElementById("month").innerHTML = mon;
+  document.getElementById("year").innerHTML = yr;
 }
 
+// Update time every 10 milliseconds
 setInterval(displayTime, 10);
 
-  const inputDate = localStorage.getItem("dob")
-  const dateOfBirth = inputDate;
-  const targetDate = calculateTargetDate(dateOfBirth);
-    updateCountDown(targetDate);
+// Retrieve and calculate target date
+const inputDate = localStorage.getItem("dob");
+const dateOfBirth = inputDate;
+const targetDate = calculateTargetDate(dateOfBirth);
+updateCountDown(targetDate);
 
-    setInterval(() => {
-      updateCountDown(targetDate);
-    }, 1000);
+// Update countdown every second
+setInterval(() => {
+  updateCountDown(targetDate);
+}, 1000);
 
-  
+// Function to get date of birth
 function getDob() {
-  var dateInput = document.getElementById("dobInput").value;
+  const dateInput = document.getElementById("dobInput").value;
   if (dateInput === "") {
-      alert("Please enter a date.");
-      return false;
+    alert("Please enter a date.");
+    return false;
   } else if (!isValidDate(dateInput)) {
-      alert("Please enter a valid date (YYYY-MM-DD).");
-      return false;
+    alert("Please enter a valid date (YYYY-MM-DD).");
+    return false;
   } else {
-
-  localStorage.setItem("dob", dateInput)
+    localStorage.setItem("dob", dateInput);
+  }
 }
-}
 
-
+// Update countdown timer
 function updateCountDown(targetDate) {
   const now = new Date();
   const timeLeft = targetDate - now;
@@ -95,19 +95,21 @@ function updateCountDown(targetDate) {
   document.getElementById("Second").textContent = seconds + "s";
 }
 
+// Calculate target date
 function calculateTargetDate(dateOfBirth) {
   const birthDate = new Date(dateOfBirth);
   birthDate.setFullYear(birthDate.getFullYear() + 100);
   return birthDate;
 }
 
+// Function to check if a date is valid
 function isValidDate(dateString) {
-  var regex = /^\d{4}-\d{2}-\d{2}$/;
+  const regex = /^\d{4}-\d{2}-\d{2}$/;
   if (!regex.test(dateString)) return false;
-  var parts = dateString.split("-");
-  var year = parseInt(parts[0]);
-  var month = parseInt(parts[1]);
-  var day = parseInt(parts[2]);
+  const parts = dateString.split("-");
+  const year = parseInt(parts[0]);
+  const month = parseInt(parts[1]);
+  const day = parseInt(parts[2]);
   if (month < 1 || month > 12 || day < 1 || day > 31) return false;
   return true;
 }
