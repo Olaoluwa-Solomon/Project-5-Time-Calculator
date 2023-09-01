@@ -15,7 +15,7 @@ function getUser() {
   } else {
     getDob();
     localStorage.setItem("username", Homeinput.value);
-    navigate.href = "index.html";
+    
   }
 }
 
@@ -70,6 +70,8 @@ function getDob() {
     return false;
   } else {
     localStorage.setItem("dob", dateInput);
+      navigate.href = "Second Page.html";
+
   }
 }
 
