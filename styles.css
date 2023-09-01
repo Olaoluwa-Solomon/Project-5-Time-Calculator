@@ -244,18 +244,20 @@ button {
 }
 
 .main h4 span.numbers {
-    font-size: 23px;
+    font-size: 22px;
     padding: 5px;
+    box-shadow: 5px 5px 10px 2px rgba(240, 235, 237, 0.15);
 }
 
 .main h4 span.numbersalign {
-    font-size: 25px;
+    font-size: 22px;
     margin-left: 280px;
     padding: 5px;
+    box-shadow: 5px 5px 10px 2px rgba(240, 235, 237, 0.15);
 }
 
 .main h4 span {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 600;
     color: #fff;
 }
