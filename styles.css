@@ -173,11 +173,15 @@
     text-align: center;
     padding-top: 50px;
     padding-bottom: 30px;
+    margin-top: 70px;
 }
 
 .note {
-    font-size: 20px;
+    font-size: 15px;
     margin-top: 15px;
+    /* margin-left: 60px; */
+    /* width: 60%; */
+    text-align: center;
 }
 
 .mainHome .input input {
@@ -225,13 +229,14 @@ button {
     align-items: center;
     font-size: 30px;
     justify-content: center;
-    margin-top: 0px;
+    margin-top: 50px;
 }
 
 .main .greeting .backButton ion-icon {
     font-size: 40px;
     padding-top: 0px;
     padding-left: 10px;
+    margin-top: 30px;
 }
 
 .username {
